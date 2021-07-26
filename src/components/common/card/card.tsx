@@ -21,22 +21,22 @@ function CardComponent(props: Props) {
                     </Typography>
                     <div className="icons">
                         <div className="icon">
-                            <CreateIcon onClick={() => props.onEditHandler(props.campaign)}></CreateIcon>
+                            <CreateIcon data-testid="edit-icon" onClick={() => props.onEditHandler(props.campaign)}></CreateIcon>
                         </div>
                         <div className="icon">
-                            <DeleteSharpIcon onClick={() => props.onDeleteHandler(props.campaign)}></DeleteSharpIcon>
+                            <DeleteSharpIcon data-testid="delete-icon" onClick={() => props.onDeleteHandler(props.campaign)}></DeleteSharpIcon>
                         </div>
                     </div>
                 </div>
                 <div className="secondary-content">
-                    <Typography className="title" color="textSecondary" gutterBottom>
+                    <Typography data-testid="creator" className="title" color="textSecondary" gutterBottom>
                         creator: {props.campaign.creator}
                     </Typography>
                     <div className="dates">
-                        <Typography className="pos" color="textSecondary">
+                        <Typography data-testid="created" className="pos" color="textSecondary">
                             created on: {props.campaign.createdAt}
                         </Typography>
-                        <Typography className="pos" color="textSecondary">
+                        <Typography data-testid="modified" className="pos" color="textSecondary">
                             last modified on: {props.campaign.lastModified}
                         </Typography>
                     </div>

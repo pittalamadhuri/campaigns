@@ -57,12 +57,12 @@ function EditCampaignComponent(props: Props) {
             aria-describedby="simple-modal-description"
         >
             <div className="edit-dialog">
-                <DialogTitle id="simple-dialog-title">Edit Campaign</DialogTitle>
+                <DialogTitle data-testid="title" id="simple-dialog-title">Edit Campaign</DialogTitle>
                 <div className="text-boxes">
-                    <TextField id="outlined-basic" label="Name" variant="outlined" value={name} onChange={(e) => updateName(e.target.value)} />
-                    {isError && <span className="error-text">Campaign name already exists</span>}
+                    <TextField data-testid="name" id="outlined-basic" label="Name" variant="outlined" value={name} onChange={(e) => updateName(e.target.value)} />
+                    {isError && <span data-testid="error" className="error-text">Campaign name already exists</span>}
                 </div>
-                <Button variant="contained" color="primary" disabled={props.campaign.name === name} onClick={editCampaign}>Update</Button>
+                <Button data-testid="update-button" variant="contained" color="primary" disabled={props.campaign.name === name} onClick={editCampaign}>Update</Button>
             </div>
         </Dialog >
     );
