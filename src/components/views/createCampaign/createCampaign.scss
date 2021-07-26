@@ -1,0 +1,29 @@
+.create-dialog {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    min-height: 300px !important;
+    min-width: 300px !important;
+
+    .text-boxes {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        div {
+            margin: 2px;
+        }
+
+        span {
+            margin: 5px;
+        }
+    }
+
+    button {
+        margin-top: 20px;
+    }
+
+    .error-text {
+        color: red;
+    }
+}

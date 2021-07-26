@@ -1,24 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
+import { useEffect } from 'react';
 import './App.css';
+import CampaignList from './components/views/campaignList/campaignList';
+import HeaderComponent from './components/views/header/header';
+import { CAMPAIGNS } from './constants/campaignList';
+import { useStore } from './state/state';
 
 function App() {
+
+  const { initCampaigns } = useStore((state) => state)
+  useEffect(() => {
+    initCampaigns(CAMPAIGNS);
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <HeaderComponent />
+      <CampaignList />
     </div>
   );
 }

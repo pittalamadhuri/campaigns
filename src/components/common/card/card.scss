@@ -1,0 +1,41 @@
+.card {
+    min-width: 500px;
+    margin: 10px;
+
+    .card-head,
+    .icons {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .icon {
+        :hover {
+            background-color: grey;
+            box-shadow: 2px;
+        }
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+
+        .secondary-content {
+            margin-top: 10px;
+        }
+    }
+
+    .title {
+        font-size: 14;
+        text-align: left;
+    }
+
+    .pos {
+        margin-bottom: 12;
+    }
+
+    .dates {
+        display: flex;
+        justify-content: space-between;
+    }
+}
